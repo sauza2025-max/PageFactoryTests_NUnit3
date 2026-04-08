@@ -38,12 +38,12 @@ namespace PageFactoryTests_NUnit3
             driver.FindElement(By.Id("height")).SendKeys(height);
             driver.FindElement(By.Id("weight")).Clear();
             driver.FindElement(By.Id("weight")).SendKeys(weight);
-            driver.FindElement(By.ClassName("btn btn-primary")).Click();
+            driver.FindElement(By.ClassName("btn-primary")).Click();
         }
 
         public String Bmi
         {
-            get { return driver.FindElement(By.Id("BMI")).GetAttribute("value").ToString(); }
+            get { return driver.FindElement(By.Id("BMI")).Text.ToString(); }
         }
 
         //public String BmiCategory
